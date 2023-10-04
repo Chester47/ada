@@ -3,20 +3,19 @@ package org.example;
 import java.util.Scanner;
 
 public class ConsoleUtils {
+    Scanner scanner = new Scanner(System.in);
     public void getPlayerNickname() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите ник игрока: ");
+        String nickname = scanner.nextLine();
     }
     public void getPlayerLogin() {
-        Scanner scanner = null;
-        String nickname = scanner.nextLine();
         System.out.print("Введите логин игрока: ");
+        String login = scanner.nextLine();
     }
+
     public void getPlayerPassword() {
-        String nickname = null;
-        System.out.println("Ник игрока: " + nickname);
-        String login = null;
-        System.out.println("Логин игрока: " + login);
+        System.out.print("Веедите пароль игрока: ");
+        String password = scanner.nextLine();
     }
 }
 
