@@ -32,9 +32,14 @@ public class ConsoleService {
         String login = scanner.nextLine();
     }
 
-    private void getPlayerPassword() {
-        System.out.print("Веедите пароль игрока: ");
+    void getPlayerPassword() {
+        System.out.print("Введите пароль игрока: ");
         String password = scanner.nextLine();
+
+        PasswordEncoderService encoder = new PasswordEncoderService();
+        String encryptedPassword = encoder.encryptPassword(password, 1);
+
+        System.out.print(encryptedPassword + '\n');
     }
 }
 

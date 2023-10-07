@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="JustDoIt">
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="chamitticK">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PasswordEncoderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConsoleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConsoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConsoleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,13 +86,24 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="ada" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,7 +117,11 @@
       <workItem from="1696347292590" duration="1736000" />
       <workItem from="1696405476527" duration="4804000" />
       <workItem from="1696445445985" duration="5788000" />
-      <workItem from="1696492709635" duration="5113000" />
+      <workItem from="1696492709635" duration="5374000" />
+      <workItem from="1696503606018" duration="4383000" />
+      <workItem from="1696600175806" duration="1031000" />
+      <workItem from="1696678455136" duration="498000" />
+      <workItem from="1696700092707" duration="2705000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -142,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696494651627</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="chamitticK">
+      <created>1696502556710</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696502556710</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +187,10 @@
     <MESSAGE value="zalupa" />
     <MESSAGE value="cuMmiTik" />
     <MESSAGE value="JustDoIt" />
-    <option name="LAST_COMMIT_MESSAGE" value="JustDoIt" />
+    <MESSAGE value="chamitticK" />
+    <option name="LAST_COMMIT_MESSAGE" value="chamitticK" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ada$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1696504195831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
