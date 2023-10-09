@@ -1,8 +1,7 @@
-package org.example;
+package org.example.service;
 
 public class PasswordEncoderService {
-    public String encryptPassword(String password, Integer offset) // "123абв"
-    {
+    public String encryptPassword(String password, Integer offset) {
         char[] charArray = password.toCharArray(); // ['1', '2', ...]
         StringBuilder sb = new StringBuilder();
 
