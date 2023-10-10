@@ -1,8 +1,12 @@
-package org.example.service;
+package org.example.utils;
+
+import org.example.entity.Person;
+import org.example.service.PasswordEncoderService;
+import org.example.service.PersonService;
 
 import java.util.Scanner;
 
-public class ConsoleService {
+public class ConsoleUtils {
     private Scanner scanner = new Scanner(System.in);
 
     public void getUserInformationOld() {
@@ -16,10 +20,10 @@ public class ConsoleService {
     }
 
     public void getUserInformationNew() {
-        ConsoleService consoleService = new ConsoleService();
-        consoleService.getPlayerNickname();
-        consoleService.getPlayerPassword();
-        consoleService.getPlayerLogin();
+        ConsoleUtils consoleUtils = new ConsoleUtils();
+        consoleUtils.getPlayerNickname();
+        consoleUtils.getPlayerPassword();
+        consoleUtils.getPlayerLogin();
     }
 
     private void getPlayerNickname() {
@@ -40,6 +44,23 @@ public class ConsoleService {
         String encryptedPassword = encoder.encryptPassword(password, 1);
 
         System.out.print(encryptedPassword + '\n');
+    }
+    public String getFirstName() {
+        System.out.print("Введите имя: ");
+        String firstName = scanner.nextLine();
+        return firstName;
+    }
+
+    public String getSecondName() {
+        System.out.print("Введите фамилию: ");
+        String secondName = scanner.nextLine();
+        return secondName;
+    }
+
+    public String getNumber() {
+        System.out.print("Введмте номер телефона: ");
+        String number = scanner.nextLine();
+        return number;
     }
 }
 

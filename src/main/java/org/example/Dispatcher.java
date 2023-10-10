@@ -1,15 +1,18 @@
 package org.example;
 
-import org.example.service.ConsoleService;
+import org.example.service.PersonService;
+import org.example.utils.ConsoleUtils;
 
 public class Dispatcher {
     public void invoke() {
-        ConsoleService consoleService = new ConsoleService();
+        ConsoleUtils consoleUtils = new ConsoleUtils();
+        PersonService personService = new PersonService();
 
         if (false) {
-            consoleService.getUserInformationOld();
+            consoleUtils.getUserInformationNew();
+            consoleUtils.getUserInformationOld();
         } else {
-            consoleService.getUserInformationNew();
+            personService.createPerson();
         }
     }
 }
