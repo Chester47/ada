@@ -1,9 +1,20 @@
 package org.example;
 
 import org.example.service.PersonService;
+import org.example.service.command.Command;
+import org.example.service.command.PersonCommand;
 import org.example.utils.ConsoleUtils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Dispatcher {
+    Map<String, Command> commands = new HashMap<>();
+
+    {
+        commands.put(new PersonCommand().getCode(), new PersonCommand());
+    }
+
     public void invoke() {
         ConsoleUtils consoleUtils = new ConsoleUtils();
         PersonService personService = new PersonService();
@@ -11,8 +22,17 @@ public class Dispatcher {
         if (false) {
             consoleUtils.getUserInformationNew();
             consoleUtils.getUserInformationOld();
-        } else {
             personService.createPerson();
+        } else {
+            for (Map.Entry<String, Command> entry : commands.entrySet()) {
+                String key = entry.getKey();
+                String value = entry.getValue().getInformation();
+
+                System.out.println(key + " " + value );
+            }
+            String code = consoleUtils.getCode();
+            Command command = commands.get(code);
+            command.apply();
         }
     }
 }

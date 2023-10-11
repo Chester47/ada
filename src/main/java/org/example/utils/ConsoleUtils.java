@@ -62,6 +62,11 @@ public class ConsoleUtils {
         String number = scanner.nextLine();
         return number;
     }
+    public String getCode() {
+        System.out.println("Введите код команды: ");
+        String gcode = scanner.nextLine();
+        return gcode;
+    }
 }
 
 
