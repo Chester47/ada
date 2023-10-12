@@ -1,8 +1,6 @@
 package org.example.utils;
 
-import org.example.entity.Person;
 import org.example.service.PasswordEncoderService;
-import org.example.service.PersonService;
 
 import java.util.Scanner;
 
@@ -45,6 +43,7 @@ public class ConsoleUtils {
 
         System.out.print(encryptedPassword + '\n');
     }
+
     public String getFirstName() {
         System.out.print("Введите имя: ");
         String firstName = scanner.nextLine();
@@ -60,7 +59,13 @@ public class ConsoleUtils {
     public String getNumber() {
         System.out.print("Введмте номер телефона: ");
         String number = scanner.nextLine();
-        return number;
+        if (number.length() == 11) {
+            System.out.println("Длина строки равна 11 символам.");
+            return number;
+        } else {
+            System.out.println("Длина строки не равна 11 символам. Повторите ввод.");
+            return getNumber();
+        }
     }
     public String getCode() {
         System.out.println("Введите код команды: ");
@@ -68,5 +73,6 @@ public class ConsoleUtils {
         return gcode;
     }
 }
+
 
 
