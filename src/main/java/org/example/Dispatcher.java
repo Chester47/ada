@@ -28,11 +28,16 @@ public class Dispatcher {
                 String key = entry.getKey();
                 String value = entry.getValue().getInformation();
 
-                System.out.println(key + " " + value );
+                System.out.println(key + " " + value);
             }
             String code = consoleUtils.getCode();
-            Command command = commands.get(code);
-            command.apply();
+            Command command = commands.getOrDefault(code, null);
+
+            if (command != null) {
+                command.apply();
+            } else {
+                System.out.println("Command not found for code: " + code);
+            }
         }
     }
 }
