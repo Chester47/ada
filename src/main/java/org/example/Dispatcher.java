@@ -3,6 +3,7 @@ package org.example;
 import org.example.service.PersonService;
 import org.example.service.command.Command;
 import org.example.service.command.DefaultCommand;
+import org.example.service.command.GetPersonCacheCommand;
 import org.example.service.command.PersonCommand;
 import org.example.utils.ConsoleUtils;
 
@@ -14,28 +15,36 @@ public class Dispatcher {
 
     {
         commands.put(new PersonCommand().getCode(), new PersonCommand());
+        commands.put(new GetPersonCacheCommand().getCode(), new GetPersonCacheCommand());
     }
 
     public void invoke() {
-        ConsoleUtils consoleUtils = new ConsoleUtils();
-        PersonService personService = new PersonService();
+        do {
+            ConsoleUtils consoleUtils = new ConsoleUtils();
+            PersonService personService = new PersonService();
 
-        if (false) {
-            consoleUtils.getUserInformationNew();
-            consoleUtils.getUserInformationOld();
-            personService.createPerson();
-        } else {
-            for (Map.Entry<String, Command> entry : commands.entrySet()) {
-                String key = entry.getKey();
-                String value = entry.getValue().getInformation();
+            if (false) {
+                consoleUtils.getUserInformationNew();
+                consoleUtils.getUserInformationOld();
+                personService.createPerson();
+            } else {
+                for (Map.Entry<String, Command> entry : commands.entrySet()) {
+                    String key = entry.getKey();
+                    String value = entry.getValue().getInformation();
 
-                System.out.println(key + " " + value);
+                    System.out.println(key + " " + value);
+                }
+                String code = consoleUtils.getCode();
+                Command command = commands.getOrDefault(code, new DefaultCommand());
+                command.apply();
             }
-            String code = consoleUtils.getCode();
-            Command command = commands.getOrDefault(code, new DefaultCommand());
-            command.apply();
-        }
+        }while (true);
     }
 }
+
+
+
+
+
 
 

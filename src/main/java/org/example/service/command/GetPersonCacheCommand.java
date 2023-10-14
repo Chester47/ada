@@ -1,31 +1,22 @@
 package org.example.service.command;
 
-import org.example.entity.Person;
 import org.example.service.PersonService;
 
-import java.util.List;
-
 public class GetPersonCacheCommand implements Command {
-PersonService personService = new PersonService();
-    public List<Person> getPersons() {
-        List<Person> persons = null;
-        return null;
-    }
+    PersonService personService = new PersonService();
+
     @Override
     public void apply() {
-        List<Person> personList = getPersons();
-        for (Person person : personList) {
-            System.out.println(person);
-        }
+        System.out.println(personService.getPersons());
     }
 
     @Override
     public String getInformation() {
-        return null;
+        return "Выводит в консоль кешированных пользователей";
     }
 
     @Override
     public String getCode() {
-        return null;
+        return "1";
     }
 }

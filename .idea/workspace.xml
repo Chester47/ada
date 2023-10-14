@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="Вопросительный чам :?">
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="переделали чам, проебали первый">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/command/DefaultCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/command/DefaultCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/command/GetPersonCacheCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/command/GetPersonCacheCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,7 @@
       <workItem from="1697238610828" duration="800000" />
       <workItem from="1697239493703" duration="967000" />
       <workItem from="1697251434523" duration="702000" />
-      <workItem from="1697274148531" duration="344000" />
+      <workItem from="1697274148531" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -256,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697251517429</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="переделали чам, проебали первый">
+      <created>1697274543386</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697274543386</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +296,8 @@
     <MESSAGE value="chamitiCHhghH +:&lt;" />
     <MESSAGE value="Чамитикмс ;&gt;" />
     <MESSAGE value="Вопросительный чам :?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вопросительный чам :?" />
+    <MESSAGE value="переделали чам, проебали первый" />
+    <option name="LAST_COMMIT_MESSAGE" value="переделали чам, проебали первый" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
