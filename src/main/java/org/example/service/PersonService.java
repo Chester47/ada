@@ -10,6 +10,11 @@ public class PersonService {
     List<Person> persons = new ArrayList<>();
 
     ConsoleUtils consoleUtils = new ConsoleUtils();
+
+    public List<Person> getPersons() {
+        return persons;
+    }
+
     public Person createPerson() {
         Person person = new Person(
                 consoleUtils.getFirstName(),
