@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.service.PersonService;
 import org.example.service.command.Command;
+import org.example.service.command.DefaultCommand;
 import org.example.service.command.PersonCommand;
 import org.example.utils.ConsoleUtils;
 
@@ -31,14 +32,10 @@ public class Dispatcher {
                 System.out.println(key + " " + value);
             }
             String code = consoleUtils.getCode();
-            Command command = commands.getOrDefault(code, null);
-
-            if (command != null) {
-                command.apply();
-            } else {
-                System.out.println("Command not found for code: " + code);
-            }
+            Command command = commands.getOrDefault(code, new DefaultCommand());
+            command.apply();
         }
     }
 }
+
 
