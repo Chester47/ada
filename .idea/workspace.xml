@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="Фальшивка сука (chamIttik) :&gt;&lt;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonCacheService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/command/DefaultCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/DefaultCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/command/GetPersonCacheCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/GetPersonCacheCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/command/PersonCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/PersonCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +48,13 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2WDoxPeGMkG8akdy8UeU71AmbNl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">

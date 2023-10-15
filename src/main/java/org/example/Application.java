@@ -3,7 +3,9 @@ package org.example;
 public class Application {
     public static void main(String[] args) {
        Dispatcher dispatcher = new Dispatcher();
-       dispatcher.invoke();
+       do {
+           dispatcher.invoke();
+       } while (true);
     }
 }
 

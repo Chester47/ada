@@ -1,16 +1,20 @@
 package org.example;
 
-import org.example.service.PersonService;
 import org.example.command.Command;
 import org.example.command.DefaultCommand;
 import org.example.command.GetPersonCacheCommand;
 import org.example.command.PersonCommand;
+import org.example.service.PersonService;
 import org.example.utils.ConsoleUtils;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Dispatcher {
+
+
+    ConsoleUtils consoleUtils = new ConsoleUtils();
+    PersonService personService = new PersonService();
     Map<String, Command> commands = new HashMap<>();
 
     {
@@ -19,26 +23,22 @@ public class Dispatcher {
     }
 
     public void invoke() {
-        do {
-            ConsoleUtils consoleUtils = new ConsoleUtils();
-            PersonService personService = new PersonService();
 
-            if (false) {
-                consoleUtils.getUserInformationNew();
-                consoleUtils.getUserInformationOld();
-                personService.createPerson();
-            } else {
-                for (Map.Entry<String, Command> entry : commands.entrySet()) {
-                    String key = entry.getKey();
-                    String value = entry.getValue().getInformation();
+        if (false) {
+            consoleUtils.getUserInformationNew();
+            consoleUtils.getUserInformationOld();
+            personService.createPerson();
+        } else {
+            for (Map.Entry<String, Command> entry : commands.entrySet()) {
+                String key = entry.getKey();
+                String value = entry.getValue().getInformation();
 
-                    System.out.println(key + " " + value);
-                }
-                String code = consoleUtils.getCode();
-                Command command = commands.getOrDefault(code, new DefaultCommand());
-                command.apply();
+                System.out.println(key + " " + value);
             }
-        }while (true);
+            String code = consoleUtils.getCode();
+            Command command = commands.getOrDefault(code, new DefaultCommand());
+            command.apply();
+        }
     }
 }
 
