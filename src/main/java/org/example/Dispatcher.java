@@ -1,10 +1,10 @@
 package org.example;
 
 import org.example.service.PersonService;
-import org.example.service.command.Command;
-import org.example.service.command.DefaultCommand;
-import org.example.service.command.GetPersonCacheCommand;
-import org.example.service.command.PersonCommand;
+import org.example.command.Command;
+import org.example.command.DefaultCommand;
+import org.example.command.GetPersonCacheCommand;
+import org.example.command.PersonCommand;
 import org.example.utils.ConsoleUtils;
 
 import java.util.HashMap;

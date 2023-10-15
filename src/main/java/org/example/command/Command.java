@@ -1,4 +1,4 @@
-package org.example.service.command;
+package org.example.command;
 
 public interface Command {
     void apply();

@@ -1,4 +1,4 @@
-package org.example.service.command;
+package org.example.command;
 
 import org.example.entity.Person;
 import org.example.service.PersonService;

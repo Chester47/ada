@@ -1,13 +1,12 @@
-package org.example.service.command;
+package org.example.command;
 
-import org.example.service.PersonService;
+import org.example.service.PersonCacheService;
 
 public class GetPersonCacheCommand implements Command {
-    PersonService personService = new PersonService();
 
     @Override
     public void apply() {
-        System.out.println(personService.getPersons());
+        System.out.println(PersonCacheService.getInstance().getCachePersons());
     }
 
     @Override
