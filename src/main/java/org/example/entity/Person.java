@@ -1,22 +1,11 @@
 package org.example.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+@AllArgsConstructor
+@Data
 public class Person {
-    String firstName;
-    String secondName;
-    String phone;
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", secondName='" + secondName + '\'' +
-                ", phone='" + phone + '\'' +
-                '}';
-    }
-
-    public Person(String firstName, String secondName, String phone) {
-        this.firstName = firstName;
-        this.secondName = secondName;
-        this.phone = phone;
-    }
+    private String firstName;
+    private String secondName;
+    private String phone;
 }

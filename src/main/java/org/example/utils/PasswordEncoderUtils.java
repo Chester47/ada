@@ -1,6 +1,6 @@
-package org.example.service;
+package org.example.utils;
 
-public class PasswordEncoderService {
+public class PasswordEncoderUtils {
     public String encryptPassword(String password, Integer offset) {
         char[] charArray = password.toCharArray(); // ['1', '2', ...]
         StringBuilder sb = new StringBuilder();

@@ -5,7 +5,7 @@ import org.example.utils.ConsoleUtils;
 
 public class PersonService {
 
-    ConsoleUtils consoleUtils = new ConsoleUtils();
+    private ConsoleUtils consoleUtils = new ConsoleUtils();
 
     public Person createPerson() {
         Person person = new Person(

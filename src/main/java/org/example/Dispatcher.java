@@ -2,8 +2,8 @@ package org.example;
 
 import org.example.command.Command;
 import org.example.command.DefaultCommand;
-import org.example.command.GetPersonCacheCommand;
-import org.example.command.PersonCommand;
+import org.example.command.GetPersonCommand;
+import org.example.command.AddPersonCommand;
 import org.example.service.PersonService;
 import org.example.utils.ConsoleUtils;
 
@@ -13,13 +13,13 @@ import java.util.Map;
 public class Dispatcher {
 
 
-    ConsoleUtils consoleUtils = new ConsoleUtils();
-    PersonService personService = new PersonService();
-    Map<String, Command> commands = new HashMap<>();
+    private ConsoleUtils consoleUtils = new ConsoleUtils();
+    private PersonService personService = new PersonService();
+    private Map<String, Command> commands = new HashMap<>();
 
     {
-        commands.put(new PersonCommand().getCode(), new PersonCommand());
-        commands.put(new GetPersonCacheCommand().getCode(), new GetPersonCacheCommand());
+        commands.put(new AddPersonCommand().getCode(), new AddPersonCommand());
+        commands.put(new GetPersonCommand().getCode(), new GetPersonCommand());
     }
 
     public void invoke() {

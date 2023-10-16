@@ -2,7 +2,7 @@ package org.example.command;
 
 import org.example.service.PersonCacheService;
 
-public class GetPersonCacheCommand implements Command {
+public class GetPersonCommand implements Command {
 
     @Override
     public void apply() {

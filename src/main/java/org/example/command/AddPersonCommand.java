@@ -3,7 +3,7 @@ package org.example.command;
 import org.example.entity.Person;
 import org.example.service.PersonService;
 
-public class PersonCommand implements Command {
+public class AddPersonCommand implements Command {
 
     PersonService personService = new PersonService();
 

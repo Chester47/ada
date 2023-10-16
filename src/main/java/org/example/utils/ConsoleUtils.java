@@ -1,7 +1,5 @@
 package org.example.utils;
 
-import org.example.service.PasswordEncoderService;
-
 import java.util.Scanner;
 
 public class ConsoleUtils {
@@ -38,7 +36,7 @@ public class ConsoleUtils {
         System.out.print("Введите пароль игрока: ");
         String password = scanner.nextLine();
 
-        PasswordEncoderService encoder = new PasswordEncoderService();
+        PasswordEncoderUtils encoder = new PasswordEncoderUtils();
         String encryptedPassword = encoder.encryptPassword(password, 1);
 
         System.out.print(encryptedPassword + '\n');
