@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.command.Command;
-import org.example.command.DefaultCommand;
-import org.example.command.GetPersonCommand;
-import org.example.command.AddPersonCommand;
+import org.example.command.*;
 import org.example.service.PersonService;
 import org.example.utils.ConsoleUtils;
 
@@ -20,6 +17,7 @@ public class Dispatcher {
     {
         commands.put(new AddPersonCommand().getCode(), new AddPersonCommand());
         commands.put(new GetPersonCommand().getCode(), new GetPersonCommand());
+        commands.put(new AddBookCommand().getCode(), new AddBookCommand());
     }
 
     public void invoke() {
