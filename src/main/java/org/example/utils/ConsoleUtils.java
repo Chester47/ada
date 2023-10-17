@@ -70,6 +70,17 @@ public class ConsoleUtils {
         String gcode = scanner.nextLine();
         return gcode;
     }
+
+    public String getAuthor() {
+        System.out.println("Введите автора: ");
+        String author = scanner.nextLine();
+        return author;
+    }
+    public String getTitle() {
+        System.out.println("Введите заглавие книги: ");
+        String title = scanner.nextLine();
+        return title;
+    }
 }
 
 

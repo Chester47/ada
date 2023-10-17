@@ -18,6 +18,7 @@ public class Dispatcher {
         commands.put(new AddPersonCommand().getCode(), new AddPersonCommand());
         commands.put(new GetPersonCommand().getCode(), new GetPersonCommand());
         commands.put(new AddBookCommand().getCode(), new AddBookCommand());
+        commands.put(new GetBookCommand().getCode(), new GetBookCommand());
     }
 
     public void invoke() {

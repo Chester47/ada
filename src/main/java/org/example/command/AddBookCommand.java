@@ -14,7 +14,7 @@ public class AddBookCommand implements Command {
 
     @Override
     public String getInformation() {
-        return "Смотрим в книгу видим фигу";
+        return "Создание книги";
     }
 
     @Override
