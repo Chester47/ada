@@ -20,7 +20,7 @@ public class AddPersonCommand implements Command {
 
     @Override
     public String getInformation() {
-        return "Принимает поля пользователя";
+        return "Создаёт пользователя";
     }
 
 }

@@ -27,5 +27,18 @@ public class PersonCacheService {
     public List<Person> getCachePersons() {
         return cachePersons;
     }
-}
 
+    public Person findByFirstName(String firstName) {
+        for (Person person : cachePersons) {
+            if (person.getFirstName().equalsIgnoreCase(firstName)) {
+
+                return person;
+            }
+        }
+        return new Person(
+                "Пользователь не найден",
+                "Пользователь не найден",
+                "Пользователь не найден");
+
+    }
+}
