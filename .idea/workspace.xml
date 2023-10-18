@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PersonCacheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonCacheService.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="полуживой чак" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +154,12 @@
       <workItem from="1697526371451" duration="1061000" />
       <workItem from="1697529135288" duration="2677000" />
       <workItem from="1697532162617" duration="252000" />
-      <workItem from="1697539783985" duration="2617000" />
+      <workItem from="1697539783985" duration="3033000" />
+      <workItem from="1697613717024" duration="13000" />
+      <workItem from="1697632964216" duration="775000" />
+      <workItem from="1697647674825" duration="2523000" />
+      <workItem from="1697650457272" duration="235000" />
+      <workItem from="1697651081584" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -308,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697531786073</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="чам">
+      <created>1697544962376</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697544962376</updated>
+    </task>
+    <task id="LOCAL-00023" summary="полуживой чак">
+      <created>1697651106877</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697651106877</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +360,9 @@
     <MESSAGE value="Запутанный чамс :@" />
     <MESSAGE value="Безысходный чам :.." />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="чам" />
+    <MESSAGE value="полуживой чак" />
+    <option name="LAST_COMMIT_MESSAGE" value="полуживой чак" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

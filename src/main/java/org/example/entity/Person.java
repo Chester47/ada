@@ -7,5 +7,5 @@ import lombok.Data;
 public class Person {
     private String firstName;
     private String secondName;
-    private String phone;
+    private String phoneNumber;
 }

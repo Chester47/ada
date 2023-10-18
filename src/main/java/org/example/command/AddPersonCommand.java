@@ -15,7 +15,6 @@ public class AddPersonCommand implements Command {
     @Override
     public void apply() {
         Person user = personService.createPerson();
-
     }
 
     @Override
