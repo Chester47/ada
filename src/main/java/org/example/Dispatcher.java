@@ -20,6 +20,7 @@ public class Dispatcher {
         commands.put(new AddBookCommand().getCode(), new AddBookCommand());
         commands.put(new GetBookCommand().getCode(), new GetBookCommand());
         commands.put(new AddFakePersonCommand().getCode(), new AddFakePersonCommand());
+        commands.put(new AddRandomBookCommand().getCode(), new AddRandomBookCommand());
     }
 
     public void invoke() {
