@@ -28,4 +28,8 @@ public class BookCacheService {
     public List<Book> getCacheBook() {
         return cacheBook;
     }
+    public void clearCache() {
+        cacheBook.clear();
+    }
 }
+

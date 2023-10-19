@@ -21,6 +21,7 @@ public class Dispatcher {
         commands.put(new GetBookCommand().getCode(), new GetBookCommand());
         commands.put(new AddFakePersonCommand().getCode(), new AddFakePersonCommand());
         commands.put(new AddRandomBookCommand().getCode(), new AddRandomBookCommand());
+        commands.put(new ClearBookCacheCommand().getCode(), new ClearBookCacheCommand());
     }
 
     public void invoke() {
