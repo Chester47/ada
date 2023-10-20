@@ -5,7 +5,7 @@ import org.example.service.PersonService;
 
 public class AddPersonCommand implements Command {
 
-    PersonService personService = new PersonService();
+    private PersonService personService = new PersonService();
 
     @Override
     public String getCode() {

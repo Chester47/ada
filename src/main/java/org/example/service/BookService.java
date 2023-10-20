@@ -1,38 +1,42 @@
 package org.example.service;
 
 import lombok.SneakyThrows;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
+import org.example.api.RandomWordApi;
 import org.example.entity.Book;
+import org.example.service.cache.BookCache;
+import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class BookService {
+    private RandomWordApi randomWordApi = new RandomWordApi();
     private ConsoleUtils consoleUtils = new ConsoleUtils();
 
     public Book createBook() {
         Book book = new Book(
-                PersonCacheService.getInstance().findByFirstName(consoleUtils.getFirstName()),
+                PersonCache.getInstance().findByFirstName(consoleUtils.getFirstName()),
                 consoleUtils.getTitle(),
                 LocalDateTime.now());
-        BookCacheService.getInstance().addBook(book);
+        BookCache.getInstance().addBook(book);
         return book;
     }
 
     @SneakyThrows
     public void generateRandomBook() {
-        HttpClient httpClient = HttpClients.createDefault();
-        HttpGet httpGet = new HttpGet("https://random-word-api.herokuapp.com/word?number=1");
-        String response = EntityUtils.toString(httpClient.execute(httpGet).getEntity());
         Book book = new Book(
-                PersonCacheService.getInstance().findByFirstName(consoleUtils.getFirstName()),
-                response,
-                LocalDateTime.now()
-        );
-        BookCacheService.getInstance().addBook(book);
+                PersonCache.getInstance().findByFirstName(consoleUtils.getFirstName()),
+                randomWordApi.receiveTitle(),
+                LocalDateTime.now());
+        BookCache.getInstance().addBook(book);
+    }
+    public void getBookCache() {
+        List<Book> bookList = BookCache.getInstance().getCacheBook();
+        System.out.println(bookList);
+    }
+    public void clearCache() {
+       BookCache.getInstance().clearCache();
     }
 }
 

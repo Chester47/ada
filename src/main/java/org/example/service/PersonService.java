@@ -1,8 +1,10 @@
 package org.example.service;
 
 import org.example.entity.Person;
+import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
 
+import java.util.List;
 import java.util.Random;
 
 public class PersonService {
@@ -15,7 +17,7 @@ public class PersonService {
                 consoleUtils.getSecondName(),
                 consoleUtils.getNumber());
         System.out.println(person.toString());
-        PersonCacheService.getInstance().addPerson(person);
+        PersonCache.getInstance().addPerson(person);
         return person;
     }
 
@@ -26,7 +28,7 @@ public class PersonService {
         Person fakePerson = new Person(firstName, secondName, number);
 
         System.out.println(fakePerson.toString());
-        PersonCacheService.getInstance().addPerson(fakePerson);
+        PersonCache.getInstance().addPerson(fakePerson);
         return fakePerson;
     }
 
@@ -51,5 +53,12 @@ public class PersonService {
             number.append(digit);
         }
         return number.toString();
+    }
+    public void getPersonCache() {
+        List<Person> personList = PersonCache.getInstance().getCachePersons();
+        System.out.println(personList);
+    }
+    public void clearPersCache() {
+        PersonCache.getInstance().clearPersonCache();
     }
 }

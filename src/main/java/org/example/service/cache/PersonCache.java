@@ -1,21 +1,21 @@
-package org.example.service;
+package org.example.service.cache;
 
 import org.example.entity.Person;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonCacheService {
-    private static PersonCacheService instance;
+public class PersonCache {
+    private static PersonCache instance;
     private List<Person> cachePersons = new ArrayList<>();
 
-    private PersonCacheService() {
+    private PersonCache() {
 
     }
 
-    public static PersonCacheService getInstance() {
+    public static PersonCache getInstance() {
         if (instance == null) {
-            instance = new PersonCacheService();
+            instance = new PersonCache();
         }
         return instance;
     }
@@ -40,5 +40,8 @@ public class PersonCacheService {
                 "Пользователь не найден",
                 "Пользователь не найден");
 
+    }
+    public void clearPersonCache() {
+        cachePersons.clear();
     }
 }

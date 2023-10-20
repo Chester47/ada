@@ -1,22 +1,22 @@
-package org.example.service;
+package org.example.service.cache;
 
 import org.example.entity.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookCacheService {
-    private static BookCacheService instance;
+public class BookCache {
+    private static BookCache instance;
 
     private List<Book> cacheBook = new ArrayList<>();
 
-    private BookCacheService() {
+    private BookCache() {
 
     }
 
-    public static BookCacheService getInstance() {
+    public static BookCache getInstance() {
         if (instance == null) {
-            instance = new BookCacheService();
+            instance = new BookCache();
         }
         return instance;
     }

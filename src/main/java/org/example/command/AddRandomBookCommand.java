@@ -1,9 +1,10 @@
 package org.example.command;
 
+import org.example.api.RandomWordApi;
 import org.example.service.BookService;
 
 public class AddRandomBookCommand implements Command{
-    BookService bookService = new BookService();
+    private BookService bookService = new BookService();
     @Override
     public void apply() {
     bookService.generateRandomBook();

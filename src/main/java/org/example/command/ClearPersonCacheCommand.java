@@ -3,20 +3,20 @@ package org.example.command;
 import org.example.service.PersonService;
 import org.example.service.cache.PersonCache;
 
-public class GetPersonCommand implements Command {
-     private PersonService personService = new PersonService();
+public class ClearPersonCacheCommand implements Command {
+    private PersonService personService = new PersonService();
     @Override
     public void apply() {
-      personService.getPersonCache();
+        personService.clearPersCache();
     }
 
     @Override
     public String getInformation() {
-        return "Выводит в консоль кешированных пользователей";
+        return "Удаление кэшированных пользователей";
     }
 
     @Override
     public String getCode() {
-        return "1";
+        return "7";
     }
 }

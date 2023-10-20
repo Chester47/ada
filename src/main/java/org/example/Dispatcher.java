@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.command.*;
 import org.example.service.PersonService;
+import org.example.utils.CommandUtils;
 import org.example.utils.ConsoleUtils;
 
 import java.util.HashMap;
@@ -12,7 +13,9 @@ public class Dispatcher {
 
     private ConsoleUtils consoleUtils = new ConsoleUtils();
     private PersonService personService = new PersonService();
+    private CommandUtils commandUtils = new CommandUtils();
     private Map<String, Command> commands = new HashMap<>();
+
 
     {
         commands.put(new AddPersonCommand().getCode(), new AddPersonCommand());
@@ -22,6 +25,7 @@ public class Dispatcher {
         commands.put(new AddFakePersonCommand().getCode(), new AddFakePersonCommand());
         commands.put(new AddRandomBookCommand().getCode(), new AddRandomBookCommand());
         commands.put(new ClearBookCacheCommand().getCode(), new ClearBookCacheCommand());
+        commands.put(new ClearPersonCacheCommand().getCode(), new ClearPersonCacheCommand());
     }
 
     public void invoke() {
@@ -31,12 +35,7 @@ public class Dispatcher {
             consoleUtils.getUserInformationOld();
             personService.createPerson();
         } else {
-            for (Map.Entry<String, Command> entry : commands.entrySet()) {
-                String key = entry.getKey();
-                String value = entry.getValue().getInformation();
-
-                System.out.println(key + " " + value);
-            }
+            commandUtils.printlnCommands(commands);
             String code = consoleUtils.getCode();
             Command command = commands.getOrDefault(code, new DefaultCommand());
             command.apply();
