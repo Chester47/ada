@@ -36,7 +36,7 @@ public class BookService {
         System.out.println(bookList);
     }
     public void clearCache() {
-       BookCache.getInstance().clearCache();
+        BookCache.getInstance().clearCache();
     }
 }
 

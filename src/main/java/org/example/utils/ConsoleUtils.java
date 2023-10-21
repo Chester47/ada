@@ -65,6 +65,7 @@ public class ConsoleUtils {
             return getNumber();
         }
     }
+
     public String getCode() {
         System.out.println("Введите код команды: ");
         String gcode = scanner.nextLine();
@@ -76,10 +77,29 @@ public class ConsoleUtils {
         String author = scanner.nextLine();
         return author;
     }
+
     public String getTitle() {
         System.out.println("Введите заглавие книги: ");
         String title = scanner.nextLine();
         return title;
+    }
+
+    public int getMinFromConsole() {
+        System.out.print("Введите минимальное значение (min): ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    public int getMaxFromConsole() {
+        System.out.print("Введите максимальное значение (max): ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
+    }
+
+    public int getCountFromConsole() {
+        System.out.print("Введите количество (count): ");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextInt();
     }
 }
 

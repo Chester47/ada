@@ -2,7 +2,6 @@ package org.example.utils;
 
 import org.example.command.Command;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class CommandUtils {

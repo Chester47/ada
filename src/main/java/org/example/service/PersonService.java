@@ -1,5 +1,6 @@
 package org.example.service;
 
+import org.example.api.RandomSalaryApi;
 import org.example.entity.Person;
 import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
@@ -10,12 +11,18 @@ import java.util.Random;
 public class PersonService {
 
     private ConsoleUtils consoleUtils = new ConsoleUtils();
+    private RandomSalaryApi randomSalaryApi = new RandomSalaryApi();
 
     public Person createPerson() {
-        Person person = new Person(
-                consoleUtils.getFirstName(),
-                consoleUtils.getSecondName(),
-                consoleUtils.getNumber());
+        String firstName = consoleUtils.getFirstName();
+        String secondName = consoleUtils.getSecondName();
+        String number = consoleUtils.getNumber();
+        int min = consoleUtils.getMinFromConsole();
+        int max = consoleUtils.getMaxFromConsole();
+        int count = consoleUtils.getCountFromConsole();
+        String salary = randomSalaryApi.getRandomSalary(min, max, count);
+
+        Person person = new Person(firstName, secondName, number, salary);
         System.out.println(person.toString());
         PersonCache.getInstance().addPerson(person);
         return person;
@@ -25,7 +32,11 @@ public class PersonService {
         String firstName = generateRandomFirstName();
         String secondName = generateRandomSecondName();
         String number = generateRandomNumber();
-        Person fakePerson = new Person(firstName, secondName, number);
+        int min = consoleUtils.getMinFromConsole();
+        int max = consoleUtils.getMaxFromConsole();
+        int count = consoleUtils.getCountFromConsole();
+        String salary = randomSalaryApi.getRandomSalary(min, max, count);
+        Person fakePerson = new Person(firstName, secondName, number, salary);
 
         System.out.println(fakePerson.toString());
         PersonCache.getInstance().addPerson(fakePerson);
@@ -54,10 +65,12 @@ public class PersonService {
         }
         return number.toString();
     }
+
     public void getPersonCache() {
         List<Person> personList = PersonCache.getInstance().getCachePersons();
         System.out.println(personList);
     }
+
     public void clearPersCache() {
         PersonCache.getInstance().clearPersonCache();
     }

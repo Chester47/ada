@@ -38,9 +38,11 @@ public class PersonCache {
         return new Person(
                 "Пользователь не найден",
                 "Пользователь не найден",
+                "Пользователь не найден",
                 "Пользователь не найден");
 
     }
+
     public void clearPersonCache() {
         cachePersons.clear();
     }
