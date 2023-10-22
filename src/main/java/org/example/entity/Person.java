@@ -9,7 +9,9 @@ public class Person {
     private String firstName;
     private String secondName;
     private String phoneNumber;
-    private String salary;
+    private String salaryInEUR;
+    private String salaryInRUB;
 }
+
 
 

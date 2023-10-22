@@ -1,9 +1,11 @@
 package org.example.service;
 
+import org.example.api.ExchangeRatesApi;
 import org.example.api.RandomSalaryApi;
 import org.example.entity.Person;
 import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
+import org.example.utils.CurrencyUtils;
 
 import java.util.List;
 import java.util.Random;
@@ -12,6 +14,7 @@ public class PersonService {
 
     private ConsoleUtils consoleUtils = new ConsoleUtils();
     private RandomSalaryApi randomSalaryApi = new RandomSalaryApi();
+    private ExchangeRatesApi exchangeRatesApi = new ExchangeRatesApi();
 
     public Person createPerson() {
         String firstName = consoleUtils.getFirstName();
@@ -20,13 +23,18 @@ public class PersonService {
         int min = consoleUtils.getMinFromConsole();
         int max = consoleUtils.getMaxFromConsole();
         int count = consoleUtils.getCountFromConsole();
-        String salary = randomSalaryApi.getRandomSalary(min, max, count);
 
-        Person person = new Person(firstName, secondName, number, salary);
+        String salaryInEur = randomSalaryApi.getRandomSalary(min, max, count).replaceAll("\\[|\\]", "");
+        double eurToRubRate = exchangeRatesApi.receiveEurToRubRate();
+        double salaryInEurValue = Double.parseDouble(salaryInEur);
+        double salaryInRubles = salaryInEurValue * eurToRubRate;
+        Person person = new Person(firstName, secondName, number, salaryInEur, String.valueOf(salaryInRubles));
         System.out.println(person.toString());
         PersonCache.getInstance().addPerson(person);
         return person;
     }
+
+
 
     public Person createFakePerson() {
         String firstName = generateRandomFirstName();
@@ -36,7 +44,7 @@ public class PersonService {
         int max = consoleUtils.getMaxFromConsole();
         int count = consoleUtils.getCountFromConsole();
         String salary = randomSalaryApi.getRandomSalary(min, max, count);
-        Person fakePerson = new Person(firstName, secondName, number, salary);
+        Person fakePerson = new Person(firstName, secondName, number, salary,"");
 
         System.out.println(fakePerson.toString());
         PersonCache.getInstance().addPerson(fakePerson);

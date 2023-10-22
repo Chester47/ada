@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="по маленькой чам" />
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="по маленькой чам">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/api/ExchangeRatesApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/CurrencyUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/cache/PersonCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/cache/PersonCache.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,10 +82,10 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Professional/OneDrive/ada/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -89,6 +97,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.api" />
       <recent name="org.example.command" />
       <recent name="org.example" />
     </key>
@@ -168,7 +177,12 @@
       <workItem from="1697881595986" duration="1386000" />
       <workItem from="1697888517631" duration="389000" />
       <workItem from="1697890793464" duration="3031000" />
-      <workItem from="1697911155335" duration="1032000" />
+      <workItem from="1697911155335" duration="1316000" />
+      <workItem from="1697979603021" duration="2114000" />
+      <workItem from="1697982469016" duration="411000" />
+      <workItem from="1697982987753" duration="342000" />
+      <workItem from="1697986691336" duration="3487000" />
+      <workItem from="1697990188859" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -366,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697911738823</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="по маленькой чам">
+      <created>1697912403023</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1697912403023</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +405,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="zalupa" />
     <MESSAGE value="cuMmiTik" />
     <MESSAGE value="JustDoIt" />
     <MESSAGE value="chamitticK" />
@@ -408,6 +428,7 @@
     <MESSAGE value="нахнад чак" />
     <MESSAGE value="чёт не понял но понял кам" />
     <MESSAGE value="ну такой чисто на полуспущенных чам уже заебался пж убейтк" />
+    <MESSAGE value="ну" />
     <MESSAGE value="по маленькой чам" />
     <option name="LAST_COMMIT_MESSAGE" value="по маленькой чам" />
   </component>
