@@ -11,6 +11,7 @@ public class Person {
     private String phoneNumber;
     private String salaryInEUR;
     private String salaryInRUB;
+    private String salaryInIRR;
 }
 
 

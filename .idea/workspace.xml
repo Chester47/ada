@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="по маленькой чам">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/api/ExchangeRatesApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/CurrencyUtils.java" afterDir="false" />
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="закрепил подкрепил чам">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/ExchangeRatesApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/ExchangeRatesApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/cache/PersonCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/cache/PersonCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/CurrencyUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/CurrencyUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +179,8 @@
       <workItem from="1697982469016" duration="411000" />
       <workItem from="1697982987753" duration="342000" />
       <workItem from="1697986691336" duration="3487000" />
-      <workItem from="1697990188859" duration="679000" />
+      <workItem from="1697990188859" duration="765000" />
+      <workItem from="1698051652014" duration="7141000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -387,7 +385,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697912403023</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="кам">
+      <created>1697990889068</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697990889068</updated>
+    </task>
+    <task id="LOCAL-00031" summary="закрепил подкрепил чам">
+      <created>1698054224704</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1698054224704</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,8 +417,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cuMmiTik" />
-    <MESSAGE value="JustDoIt" />
     <MESSAGE value="chamitticK" />
     <MESSAGE value="solo" />
     <MESSAGE value="vrod' tak" />
@@ -430,9 +440,24 @@
     <MESSAGE value="ну такой чисто на полуспущенных чам уже заебался пж убейтк" />
     <MESSAGE value="ну" />
     <MESSAGE value="по маленькой чам" />
-    <option name="LAST_COMMIT_MESSAGE" value="по маленькой чам" />
+    <MESSAGE value="кам" />
+    <MESSAGE value="закрепил подкрепил чам" />
+    <option name="LAST_COMMIT_MESSAGE" value="закрепил подкрепил чам" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/utils/CurrencyUtils.java</url>
+          <line>25</line>
+          <properties class="org.example.utils.CurrencyUtils" method="calculateIrrSalary">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="persons" language="JAVA" />

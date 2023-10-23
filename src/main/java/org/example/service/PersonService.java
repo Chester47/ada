@@ -15,6 +15,7 @@ public class PersonService {
     private ConsoleUtils consoleUtils = new ConsoleUtils();
     private RandomSalaryApi randomSalaryApi = new RandomSalaryApi();
     private ExchangeRatesApi exchangeRatesApi = new ExchangeRatesApi();
+    private CurrencyUtils currencyUtils = new CurrencyUtils();
 
     public Person createPerson() {
         String firstName = consoleUtils.getFirstName();
@@ -25,26 +26,40 @@ public class PersonService {
         int count = consoleUtils.getCountFromConsole();
 
         String salaryInEur = randomSalaryApi.getRandomSalary(min, max, count).replaceAll("\\[|\\]", "");
+        String salaryInIrr = randomSalaryApi.getRandomSalary(min, max, count).replaceAll("\\[|\\]", "");
         double eurToRubRate = exchangeRatesApi.receiveEurToRubRate();
+        double irrToRubRate = exchangeRatesApi.receiveEurToIrrRate();
         double salaryInEurValue = Double.parseDouble(salaryInEur);
+        double salaryInIRRValue = Double.parseDouble(salaryInIrr);
         double salaryInRubles = salaryInEurValue * eurToRubRate;
-        Person person = new Person(firstName, secondName, number, salaryInEur, String.valueOf(salaryInRubles));
+        double salaryInRub = salaryInIRRValue * irrToRubRate;
+        Person person = new Person(
+                firstName,
+                secondName,
+                number,
+                salaryInEur,
+                String.valueOf(salaryInRubles),
+                String.valueOf(salaryInRub));
+
         System.out.println(person.toString());
         PersonCache.getInstance().addPerson(person);
         return person;
     }
 
 
-
     public Person createFakePerson() {
         String firstName = generateRandomFirstName();
         String secondName = generateRandomSecondName();
         String number = generateRandomNumber();
-        int min = consoleUtils.getMinFromConsole();
-        int max = consoleUtils.getMaxFromConsole();
-        int count = consoleUtils.getCountFromConsole();
-        String salary = randomSalaryApi.getRandomSalary(min, max, count);
-        Person fakePerson = new Person(firstName, secondName, number, salary,"");
+
+        String salaryInEUR = currencyUtils.receiveEurSalary();
+        Person fakePerson = new Person(
+                firstName,
+                secondName,
+                number,
+                salaryInEUR,
+                currencyUtils.calculateRubSalary(salaryInEUR),
+                currencyUtils.calculateIrrSalary(salaryInEUR));
 
         System.out.println(fakePerson.toString());
         PersonCache.getInstance().addPerson(fakePerson);

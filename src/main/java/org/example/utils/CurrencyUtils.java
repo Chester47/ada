@@ -1,13 +1,32 @@
 package org.example.utils;
 
-public class CurrencyUtils {
-    private int usdToRubRate;
+import org.example.api.ExchangeRatesApi;
+import org.example.api.RandomSalaryApi;
 
-    public CurrencyUtils(int usdToRubRate) {
-        this.usdToRubRate = usdToRubRate;
+public class CurrencyUtils {
+    private ConsoleUtils consoleUtils = new ConsoleUtils();
+    private RandomSalaryApi randomSalaryApi = new RandomSalaryApi();
+    private ExchangeRatesApi exchangeRatesApi = new ExchangeRatesApi();
+
+    public String receiveEurSalary() {
+        int min = consoleUtils.getMinFromConsole();
+        int max = consoleUtils.getMaxFromConsole();
+        int count = consoleUtils.getCountFromConsole();
+        String salaryInEur = randomSalaryApi.getRandomSalary(min, max, count).replaceAll("\\[|\\]", "");
+        return salaryInEur;
     }
 
-    public int calculateSalaryInRub(double salaryInUsd) {
-        return (int) (salaryInUsd * usdToRubRate);
+    public String calculateRubSalary(String salaryInEUR) {
+        double eurToRubRate = exchangeRatesApi.receiveEurToRubRate();
+        double salaryInEurValue = Double.parseDouble(salaryInEUR);
+        double salaryInRubles = salaryInEurValue * eurToRubRate;
+        return String.valueOf(salaryInRubles);
+    }
+
+    public String calculateIrrSalary(String salaryInEur) {
+        double eurToIrrRate = exchangeRatesApi.receiveEurToIrrRate();
+        double salaryInIRRValue = Double.parseDouble(salaryInEur);
+        double salaryInIrr = salaryInIRRValue * eurToIrrRate;
+        return String.valueOf(salaryInIrr);
     }
 }
