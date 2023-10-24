@@ -39,7 +39,8 @@ public class PersonService {
                 number,
                 salaryInEur,
                 String.valueOf(salaryInRubles),
-                String.valueOf(salaryInRub));
+                String.valueOf(salaryInRub),""
+                );
 
         System.out.println(person.toString());
         PersonCache.getInstance().addPerson(person);
@@ -59,7 +60,8 @@ public class PersonService {
                 number,
                 salaryInEUR,
                 currencyUtils.calculateRubSalary(salaryInEUR),
-                currencyUtils.calculateIrrSalary(salaryInEUR));
+                currencyUtils.calculateIrrSalary(salaryInEUR),
+                currencyUtils.calculateFkpSalary(salaryInEUR));
 
         System.out.println(fakePerson.toString());
         PersonCache.getInstance().addPerson(fakePerson);

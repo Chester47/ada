@@ -29,4 +29,10 @@ public class CurrencyUtils {
         double salaryInIrr = salaryInIRRValue * eurToIrrRate;
         return String.valueOf(salaryInIrr);
     }
+    public String calculateFkpSalary(String salaryEur) {
+        double eutToFkpRate = exchangeRatesApi.receiveEurToFkpRate();
+        double salaryInFkpValue = Double.parseDouble(salaryEur);
+        double salaryInFkp = salaryInFkpValue * eutToFkpRate;
+        return String.valueOf(salaryInFkp);
+    }
 }

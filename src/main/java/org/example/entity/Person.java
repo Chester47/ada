@@ -12,6 +12,7 @@ public class Person {
     private String salaryInEUR;
     private String salaryInRUB;
     private String salaryInIRR;
+    private String salaryInFkp;
 }
 
 

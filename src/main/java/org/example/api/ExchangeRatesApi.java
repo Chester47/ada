@@ -11,7 +11,7 @@ import org.apache.http.util.EntityUtils;
 
 public class ExchangeRatesApi {
     private static final String API_URL = "http://api.exchangeratesapi.io/v1/latest";
-    private static final String ACCESS_KEY = "823646b7cd61268b0809af509627c01f";
+    private static final String ACCESS_KEY = "ee19ab8b912630f2f91b794dd6137e7b";
     private ObjectMapper objectMapper = new ObjectMapper();
 
     @SneakyThrows
@@ -36,5 +36,16 @@ public class ExchangeRatesApi {
         JsonNode jsonNode = objectMapper.readTree(response);
         double irrToRubExchangeRate = jsonNode.get("rates").get("IRR").asDouble();
         return irrToRubExchangeRate;
+    }
+    @SneakyThrows
+    public double receiveEurToFkpRate() {
+        HttpClient httpClientIrr = HttpClients.createDefault();
+        URIBuilder uriBuilder = new URIBuilder(API_URL);
+        uriBuilder.setParameter("access_key", ACCESS_KEY);
+        HttpGet httpGet = new HttpGet(uriBuilder.build());
+        String response = EntityUtils.toString(httpClientIrr.execute(httpGet).getEntity());
+        JsonNode jsonNode = objectMapper.readTree(response);
+        double fkpToRubExchangeRate = jsonNode.get("rates").get("FKP").asDouble();
+        return fkpToRubExchangeRate;
     }
 }
