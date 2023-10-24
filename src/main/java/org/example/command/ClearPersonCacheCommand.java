@@ -1,10 +1,10 @@
 package org.example.command;
 
 import org.example.service.PersonService;
-import org.example.service.cache.PersonCache;
 
 public class ClearPersonCacheCommand implements Command {
     private PersonService personService = new PersonService();
+
     @Override
     public void apply() {
         personService.clearPersCache();

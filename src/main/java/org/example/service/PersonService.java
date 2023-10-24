@@ -2,6 +2,7 @@ package org.example.service;
 
 import org.example.api.ExchangeRatesApi;
 import org.example.api.RandomSalaryApi;
+import org.example.entity.Nalog;
 import org.example.entity.Person;
 import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
@@ -16,33 +17,29 @@ public class PersonService {
     private RandomSalaryApi randomSalaryApi = new RandomSalaryApi();
     private ExchangeRatesApi exchangeRatesApi = new ExchangeRatesApi();
     private CurrencyUtils currencyUtils = new CurrencyUtils();
+    private Nalog nalog = new Nalog("20", "6");
 
     public Person createPerson() {
         String firstName = consoleUtils.getFirstName();
         String secondName = consoleUtils.getSecondName();
         String number = consoleUtils.getNumber();
-        int min = consoleUtils.getMinFromConsole();
-        int max = consoleUtils.getMaxFromConsole();
-        int count = consoleUtils.getCountFromConsole();
 
-        String salaryInEur = randomSalaryApi.getRandomSalary(min, max, count).replaceAll("\\[|\\]", "");
-        String salaryInIrr = randomSalaryApi.getRandomSalary(min, max, count).replaceAll("\\[|\\]", "");
-        double eurToRubRate = exchangeRatesApi.receiveEurToRubRate();
-        double irrToRubRate = exchangeRatesApi.receiveEurToIrrRate();
-        double salaryInEurValue = Double.parseDouble(salaryInEur);
-        double salaryInIRRValue = Double.parseDouble(salaryInIrr);
-        double salaryInRubles = salaryInEurValue * eurToRubRate;
-        double salaryInRub = salaryInIRRValue * irrToRubRate;
+        String salaryInEur = currencyUtils.receiveEurSalary();
+        String salaryInRUB = currencyUtils.calculateRubSalary(salaryInEur);
+        String salaryInIRR = currencyUtils.calculateIrrSalary(salaryInEur);
+        String salaryInFkp = currencyUtils.calculateFkpSalary(salaryInEur);
         Person person = new Person(
                 firstName,
                 secondName,
                 number,
                 salaryInEur,
-                String.valueOf(salaryInRubles),
-                String.valueOf(salaryInRub),""
-                );
+                salaryInRUB,
+                salaryInIRR,
+                salaryInFkp,
+                nalog.calculateNetSalary(salaryInRUB),
+                nalog.calculateNetSalary(salaryInIRR),
+                nalog.calculateNetSalary(salaryInFkp));
 
-        System.out.println(person.toString());
         PersonCache.getInstance().addPerson(person);
         return person;
     }
@@ -53,15 +50,21 @@ public class PersonService {
         String secondName = generateRandomSecondName();
         String number = generateRandomNumber();
 
-        String salaryInEUR = currencyUtils.receiveEurSalary();
+        String salaryInEur = currencyUtils.receiveEurSalary();
+        String salaryInRUB = currencyUtils.calculateRubSalary(salaryInEur);
+        String salaryInIRR = currencyUtils.calculateIrrSalary(salaryInEur);
+        String salaryInFkp = currencyUtils.calculateFkpSalary(salaryInEur);
         Person fakePerson = new Person(
                 firstName,
                 secondName,
                 number,
-                salaryInEUR,
-                currencyUtils.calculateRubSalary(salaryInEUR),
-                currencyUtils.calculateIrrSalary(salaryInEUR),
-                currencyUtils.calculateFkpSalary(salaryInEUR));
+                salaryInEur,
+                salaryInRUB,
+                salaryInIRR,
+                salaryInFkp,
+                nalog.calculateNetSalary(salaryInRUB),
+                nalog.calculateNetSalary(salaryInIRR),
+                nalog.calculateNetSalary(salaryInFkp));
 
         System.out.println(fakePerson.toString());
         PersonCache.getInstance().addPerson(fakePerson);

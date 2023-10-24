@@ -37,6 +37,7 @@ public class ExchangeRatesApi {
         double irrToRubExchangeRate = jsonNode.get("rates").get("IRR").asDouble();
         return irrToRubExchangeRate;
     }
+
     @SneakyThrows
     public double receiveEurToFkpRate() {
         HttpClient httpClientIrr = HttpClients.createDefault();

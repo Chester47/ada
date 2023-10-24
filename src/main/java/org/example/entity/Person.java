@@ -13,6 +13,9 @@ public class Person {
     private String salaryInRUB;
     private String salaryInIRR;
     private String salaryInFkp;
+    private String salaryInRubNet;
+    private String salaryInIrrNet;
+    private String salaryInFkpNet;
 }
 
 

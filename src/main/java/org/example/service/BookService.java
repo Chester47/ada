@@ -31,10 +31,12 @@ public class BookService {
                 LocalDateTime.now());
         BookCache.getInstance().addBook(book);
     }
+
     public void getBookCache() {
         List<Book> bookList = BookCache.getInstance().getCacheBook();
         System.out.println(bookList);
     }
+
     public void clearCache() {
         BookCache.getInstance().clearCache();
     }

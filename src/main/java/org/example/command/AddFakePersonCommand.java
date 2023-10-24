@@ -2,8 +2,9 @@ package org.example.command;
 
 import org.example.service.PersonService;
 
-public class AddFakePersonCommand implements Command{
+public class AddFakePersonCommand implements Command {
     private PersonService personService = new PersonService();
+
     @Override
     public void apply() {
         personService.createFakePerson();
