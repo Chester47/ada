@@ -6,10 +6,11 @@ import org.example.entity.Book;
 import org.example.service.cache.BookCache;
 import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
-
+@Service
 public class BookService {
     private RandomWordApi randomWordApi = new RandomWordApi();
     private ConsoleUtils consoleUtils = new ConsoleUtils();

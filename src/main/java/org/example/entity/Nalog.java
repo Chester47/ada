@@ -1,5 +1,7 @@
 package org.example.entity;
 
+
+
 public class Nalog {
     private String nds = "20";
     private String ysn = "6";

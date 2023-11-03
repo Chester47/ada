@@ -7,10 +7,12 @@ import org.example.entity.Person;
 import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
 import org.example.utils.CurrencyUtils;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Random;
 
+@Service
 public class PersonService {
 
     private ConsoleUtils consoleUtils = new ConsoleUtils();
