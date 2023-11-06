@@ -1,9 +1,11 @@
 package org.example.service;
 
+import lombok.RequiredArgsConstructor;
 import org.example.api.ExchangeRatesApi;
 import org.example.api.RandomSalaryApi;
 import org.example.entity.Nalog;
 import org.example.entity.Person;
+import org.example.repository.PersonRepository;
 import org.example.service.cache.PersonCache;
 import org.example.utils.ConsoleUtils;
 import org.example.utils.CurrencyUtils;
@@ -13,8 +15,10 @@ import java.util.List;
 import java.util.Random;
 
 @Service
+@RequiredArgsConstructor
 public class PersonService {
 
+    private final PersonRepository personRepository;
     private ConsoleUtils consoleUtils = new ConsoleUtils();
     private RandomSalaryApi randomSalaryApi = new RandomSalaryApi();
     private ExchangeRatesApi exchangeRatesApi = new ExchangeRatesApi();
@@ -30,19 +34,15 @@ public class PersonService {
         String salaryInRUB = currencyUtils.calculateRubSalary(salaryInEur);
         String salaryInIRR = currencyUtils.calculateIrrSalary(salaryInEur);
         String salaryInFkp = currencyUtils.calculateFkpSalary(salaryInEur);
-        Person person = new Person(
-                firstName,
-                secondName,
-                number,
-                salaryInEur,
-                salaryInRUB,
-                salaryInIRR,
-                salaryInFkp,
-                nalog.calculateNetSalary(salaryInRUB),
-                nalog.calculateNetSalary(salaryInIRR),
-                nalog.calculateNetSalary(salaryInFkp));
+
+        Person person = new Person();
+        person.setFirstName(firstName);
+        person.setSecondName(secondName);
+        person.setPhoneNumber(number);
 
         PersonCache.getInstance().addPerson(person);
+        personRepository.save(person);
+
         return person;
     }
 
@@ -56,20 +56,15 @@ public class PersonService {
         String salaryInRUB = currencyUtils.calculateRubSalary(salaryInEur);
         String salaryInIRR = currencyUtils.calculateIrrSalary(salaryInEur);
         String salaryInFkp = currencyUtils.calculateFkpSalary(salaryInEur);
-        Person fakePerson = new Person(
-                firstName,
-                secondName,
-                number,
-                salaryInEur,
-                salaryInRUB,
-                salaryInIRR,
-                salaryInFkp,
-                nalog.calculateNetSalary(salaryInRUB),
-                nalog.calculateNetSalary(salaryInIRR),
-                nalog.calculateNetSalary(salaryInFkp));
 
-        System.out.println(fakePerson.toString());
+        Person fakePerson = new Person();
+        fakePerson.setFirstName(firstName);
+        fakePerson.setSecondName(secondName);
+        fakePerson.setPhoneNumber(number);
+
         PersonCache.getInstance().addPerson(fakePerson);
+        personRepository.save(fakePerson);
+
         return fakePerson;
     }
 

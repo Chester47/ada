@@ -1,9 +1,14 @@
 package org.example.command;
 
+import lombok.RequiredArgsConstructor;
 import org.example.service.PersonService;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class ClearPersonCacheCommand implements Command {
-    private PersonService personService = new PersonService();
+
+    private final PersonService personService;
 
     @Override
     public void apply() {
