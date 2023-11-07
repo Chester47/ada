@@ -1,10 +1,14 @@
 package org.example.command;
 
+import lombok.RequiredArgsConstructor;
 import org.example.service.BookService;
+import org.springframework.stereotype.Component;
 
-
+@Component
+@RequiredArgsConstructor
 public class AddBookCommand implements Command {
-    private BookService bookService = new BookService();
+
+    private final BookService bookService;
 
     @Override
     public void apply() {

@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/person-create.yaml
+  - include:
+      file: db/changelog/book-create.yaml

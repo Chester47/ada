@@ -1,11 +1,15 @@
 package org.example.api;
 
+import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.springframework.stereotype.Component;
 
+@Component
+@RequiredArgsConstructor
 public class RandomWordApi {
 
     @SneakyThrows

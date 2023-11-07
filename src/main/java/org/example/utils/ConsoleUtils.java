@@ -1,7 +1,11 @@
 package org.example.utils;
 
-import java.util.Scanner;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
+import java.util.Scanner;
+@Component
+@RequiredArgsConstructor
 public class ConsoleUtils {
     private Scanner scanner = new Scanner(System.in);
 

@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="после отпускной чам">
-      <change afterPath="$PROJECT_DIR$/liquibase.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/PersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db-changelog.xml" afterDir="false" />
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="супер мега удволетворительный чам">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/book-create.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db-master.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/person-create.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/RandomWordApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/RandomWordApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/AddBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddBookCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/AddFakePersonCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddFakePersonCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/AddPersonCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddPersonCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/ClearPersonCacheCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/ClearPersonCacheCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/GetPersonCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/GetPersonCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/AddRandomBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddRandomBookCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/ClearBookCacheCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/ClearBookCacheCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/GetBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/GetBookCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/BookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/cache/PersonCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/cache/PersonCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/ConsoleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/ConsoleUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db-changelog.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +35,7 @@
         <option value="spring-beans.schema" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Liquibase Changelog" />
       </list>
     </option>
   </component>
@@ -94,7 +97,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;8c8d357b5e872bbacd45197626bd5759&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -241,7 +244,11 @@
       <workItem from="1699150088156" duration="1843000" />
       <workItem from="1699225776288" duration="162000" />
       <workItem from="1699231305486" duration="576000" />
-      <workItem from="1699268108088" duration="3642000" />
+      <workItem from="1699268108088" duration="3688000" />
+      <workItem from="1699329697899" duration="2455000" />
+      <workItem from="1699337454328" duration="328000" />
+      <workItem from="1699341679431" duration="1835000" />
+      <workItem from="1699344719692" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -495,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699025830050</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="супер мега удволетворительный чам">
+      <created>1699271757886</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1699271757887</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +527,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ChhUuUmIttick" />
     <MESSAGE value="kcHammITtiCK" />
     <MESSAGE value="ЧаммиТТикс..." />
     <MESSAGE value="камитикм :&lt;" />
@@ -538,7 +551,8 @@
     <MESSAGE value="предсмертный чам" />
     <MESSAGE value="ахуевший чам" />
     <MESSAGE value="после отпускной чам" />
-    <option name="LAST_COMMIT_MESSAGE" value="после отпускной чам" />
+    <MESSAGE value="супер мега удволетворительный чам" />
+    <option name="LAST_COMMIT_MESSAGE" value="супер мега удволетворительный чам" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

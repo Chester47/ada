@@ -27,6 +27,14 @@ public class Dispatcher {
     private final AddPersonCommand addPersonCommand;
 
     private final AddFakePersonCommand addFakePersonCommand;
+
+    private final AddBookCommand addBookCommand;
+
+    private final GetBookCommand getBookCommand;
+
+    private final AddRandomBookCommand addRandomBookCommand;
+
+    private final ClearBookCacheCommand clearBookCacheCommand;
     private CommandUtils commandUtils = new CommandUtils();
     private Map<String, Command> commands = new HashMap<>();
 
@@ -35,11 +43,11 @@ public class Dispatcher {
     public void initialize() {
         commands.put(addPersonCommand.getCode(), addPersonCommand);
         commands.put(getPersonCommand.getCode(), clearPersonCacheCommand);
-        commands.put(new AddBookCommand().getCode(), new AddBookCommand());
-        commands.put(new GetBookCommand().getCode(), new GetBookCommand());
+        commands.put(addBookCommand.getCode(), addBookCommand);
+        commands.put(getBookCommand.getCode(), getBookCommand);
         commands.put(addFakePersonCommand.getCode(), addFakePersonCommand);
-        commands.put(new AddRandomBookCommand().getCode(), new AddRandomBookCommand());
-        commands.put(new ClearBookCacheCommand().getCode(), new ClearBookCacheCommand());
+        commands.put(addRandomBookCommand.getCode(), addRandomBookCommand);
+        commands.put(clearBookCacheCommand.getCode(), clearBookCacheCommand);
         commands.put(clearPersonCacheCommand.getCode(), clearPersonCacheCommand);
     }
     public void invoke() {

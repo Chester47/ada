@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTableBooks
+      author: chizh
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  name: date_of_creation
+                  type: TIMESTAMP
+

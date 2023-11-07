@@ -69,7 +69,6 @@ public class PersonService {
     }
 
     private String generateRandomFirstName() {
-        // Генерируем случайное имя (просто для примера)
         String[] names = {"John", "Alice", "Bob", "Emily", "David", "Billy"};
         int randomIndex = new Random().nextInt(names.length);
         return names[randomIndex];
