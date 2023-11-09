@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="супер мега удволетворительный чам">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/book-create.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db-master.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/person-create.yaml" afterDir="false" />
+    <list default="true" id="1a73c0cc-54ca-4250-a6e3-fadfcd291453" name="Changes" comment="CHamMiTTik">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Dispatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/api/RandomWordApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/api/RandomWordApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/AddBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddBookCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/AddRandomBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddRandomBookCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/ClearBookCacheCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/ClearBookCacheCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/command/GetBookCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/command/GetBookCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/ConsoleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/ConsoleUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db-changelog.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +19,9 @@
       <list>
         <option value="Dockerfile" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="Liquibase Changelog" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -248,7 +234,9 @@
       <workItem from="1699329697899" duration="2455000" />
       <workItem from="1699337454328" duration="328000" />
       <workItem from="1699341679431" duration="1835000" />
-      <workItem from="1699344719692" duration="338000" />
+      <workItem from="1699344719692" duration="565000" />
+      <workItem from="1699423675190" duration="1307000" />
+      <workItem from="1699517915375" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="cumIt">
       <created>1696284884905</created>
@@ -509,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699271757887</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="CHamMiTTik">
+      <created>1699345115461</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1699345115461</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="kcHammITtiCK" />
     <MESSAGE value="ЧаммиТТикс..." />
     <MESSAGE value="камитикм :&lt;" />
     <MESSAGE value="chamitiCHhghH +:&lt;" />
@@ -552,7 +546,8 @@
     <MESSAGE value="ахуевший чам" />
     <MESSAGE value="после отпускной чам" />
     <MESSAGE value="супер мега удволетворительный чам" />
-    <option name="LAST_COMMIT_MESSAGE" value="супер мега удволетворительный чам" />
+    <MESSAGE value="CHamMiTTik" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHamMiTTik" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
